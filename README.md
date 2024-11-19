@@ -8,4 +8,5 @@
    sudo systemctl stop systemd-resolved
    sudo systemctl disable systemd-resolved
    ```
-6. docker compose up -d
+6. change /etc/resolv.conf `nameserver 127.0.0.1`
+7. docker compose up -d
