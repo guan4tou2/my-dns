@@ -1,0 +1,13 @@
+services:
+  bind9:
+    container_name: my-dns
+    image: ubuntu/bind9:9.18
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "127.0.0.1:953:953/tcp"
+    volumes:
+      - ./config/named.conf.options:/etc/bind/named.conf.options
+      - ./config/named.conf.local:/etc/bind/named.conf.local
+      - ./config/db.my.domain:/etc/bind/db.my.domain
+    restart: unless-stopped
