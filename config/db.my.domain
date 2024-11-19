@@ -11,5 +11,8 @@ $TTL	86400
 			2419200		; Expire
 			  86400 )	; Negative Cache TTL
 ;
-    IN  A   10.0.2.15 # change this ip for custom
+mail    IN  A   10.0.2.15 # change this ip for custom
+;
 @	IN	NS	localhost.
+;
+@       IN   MX  10  mail.my.domain.
